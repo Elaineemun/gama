@@ -1,0 +1,172 @@
+ <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulário de Cadastro</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+</head>
+
+<body>
+    <header>
+        <div class="logo">
+            <h1>JobsDev</h1>
+        </div>
+        <div class="menu">
+            <ul>
+                <li><a href="#">home</a></li>
+                <li><a href="#">sobre</a></li>
+                <li><a href="#">cadastre-se</a></li>
+            </ul>
+        </div>
+    </header>
+    <main>
+        <section class="container">
+            <article class="main-text">
+                <div class="title">
+                    <h2>Em busca de uma <br />oportunidade?</h2>
+                    <div class="title-decoration"></div>
+                </div>
+                
+            </article>
+        </section>
+
+        <section class="formulario">
+            <h3>Cadastre o seu currículo no formulário abaixo:</h3>
+            <form method="get" action=".">
+            <form>
+                <div class="form-row">
+                    <fieldset>
+                        <label for="name">Nome Completo:<span>*</span>
+                        </label>
+                        <input type="text" for="name" id="name" required>
+                    </fieldset>
+                    <fieldset>
+                        <label for="cargo">Cargo Pretendido:<span>*</span>
+                        </label>
+                        <input type="text" for="cargo" id="cargo" required>
+                    </fieldset>
+                </div>
+                <div class="form-row">
+                    <fieldset>
+                        <label for="nascimento"> Data de Nascimento:<span>*</span>
+                        </label>
+                        <input type="date" for="nascimento" id="nascimento" required>
+                    </fieldset>
+                    <fieldset>
+                        <label for="estado-civil"> Estado Civil:
+                        </label>
+                        <select>
+                            <option value="solteiro">Solteiro(a)</option>
+                            <option value="casado">Casado(a)</option>
+                            <option value="divorciado">Divorciado(a)</option>
+                            <option value="uniao estavel">Uniao Estavel</option>
+                        </select>
+                    </fieldset>
+                    <fieldset>
+                        <label for="name"> Sexo:
+                        </label>
+                        <select>
+                            <option value="masc">Masculino</option>
+                            <option value="fem">Feminino</option>
+                            <option value="outro">Outro</option>
+                        </select>
+                    </fieldset>
+                </div>
+                <div class="form-row">
+                    <fieldset class="cep">
+                        <label for="cep"> CEP:<span>*</span>
+                        </label>
+                        <input name="cep" type="text" id="cep" value="" size="10" maxlength="9"
+                            onblur="pesquisacep(this.value);">
+                    </fieldset>
+                    <fieldset>
+                        <label for="rua"> Endereço:<span>*</span>
+                        </label>
+                        <input type="address" for="rua" id="rua" required>
+                    </fieldset>
+                </div>
+                <div class="form-row">
+                    <fieldset>
+                        <label for="bairro"> Bairro:<span>*</span>
+                        </label>
+                        <input type="address" for="bairro" id="bairro" required>
+                    </fieldset>
+                    <fieldset>
+                        <label for="cidade"> Cidade:<span>*</span>
+                        </label>
+                        <input type="address" for="cidade" id="cidade" required>
+                    </fieldset>
+                    <fieldset class="estado">
+                        <label for="uf" >Estado:<span>*</span>
+                        </label>
+                        <input type="address" for="uf" id="uf" required>
+                    </fieldset>
+                </div>
+                <div class="form-row">
+                    <fieldset>
+                        <label for="celular"> Celular:<span>*</span>
+                        </label>
+                        <input type="phone" for="celular" id="celular" required>
+                    </fieldset>
+                    <fieldset>
+                        <label for="tel-1"> Telefone Fixo 1:
+                        </label>
+                        <input type="phone" for="tel-1" id="tel-1">
+                    </fieldset>
+                    <fieldset>
+                        <label for="tel-2"> Telefone Fixo 2:
+                        </label>
+                        <input type="phone" for="tel-2" id="tel-2">
+                    </fieldset>
+                </div>
+                <div class="form-row">
+                    <fieldset>
+                        <label for="contato"> Contato:
+                        </label>
+                        <input type="text" for="contato" id="contato">
+                    </fieldset>
+                    <fieldset>
+                        <label for="email"> Email:<span>*</span>
+                        </label>
+                        <input type="email" for="email" id="email" required>
+                    </fieldset>
+                </div>
+                <h2>Documentos</h2>
+                <div class="form-row">
+                    <fieldset>
+                        <label for="id"> Identidade:
+                        </label>
+                        <input type="number" for="id" id="id">
+                    </fieldset>
+                    <fieldset>
+                        <label for="cpf"> CPF:<span>*</span>
+                        </label>
+                        <input type="number" for="cpf" id="cpf" required>
+                    </fieldset>
+                </div>
+                <div class="form-row">
+                    <fieldset>
+                        <p>Habilitação:</p>
+                        </label>
+                        <div class="habilitacao">
+                            <input type="checkbox" id="nao_habilitado" name="nao_habilitado">
+                            <label for="nao_habilitado">Não possui</label>
+                            <input type="checkbox" id="nao_habilitado" name="nao_habilitado">
+                            <label for="nao_habilitado">Categoria A</label>
+                            <input type="checkbox" id="nao_habilitado" name="nao_habilitado">
+                            <label for="nao_habilitado">Categoria B</label>
+                            <input type="checkbox" id="nao_habilitado" name="nao_habilitado">
+                            <label for="nao_habilitado">Categoria C</label>
+                            <input type="checkbox" id="nao_habilitado" name="nao_habilitado">
+                            <label for="nao_habilitado">Categoria D</label>
+                            <input type="checkbox" id="nao_habilitado" name="nao_habilitado">
+                            <label for="nao_habilitado">Categoria E</label>
+                    
+                <button type="submit">Enviar</button>
+            </form>
+        </section>
+    </main>
+    <script src="./script.js">
+    
+    </script>
+</body>
+</html>
